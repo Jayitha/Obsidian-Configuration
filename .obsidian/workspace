@@ -1,0 +1,159 @@
+{
+  "main": {
+    "id": "157dd3197dae8974",
+    "type": "split",
+    "children": [
+      {
+        "id": "f0bba6b4b09d2de2",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Paper revision notes.md",
+            "mode": "preview"
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "81d5eb2b4b7093eb",
+    "type": "split",
+    "children": [
+      {
+        "id": "a0464e91b6232434",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "8680f227d2c8fe0c",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "22dd20059c937657",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "tag:#main-memory",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "dd8880159c586f4f",
+    "type": "split",
+    "children": [
+      {
+        "id": "58609ec193377420",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a6686d8c624c1aa7",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Paper revision notes.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": true,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "e4943ea7bc52df5f",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
+          },
+          {
+            "id": "5d1b87f29a3595b9",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
+          },
+          {
+            "id": "7493595e57e345d0",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
+          },
+          {
+            "id": "819d89b4c705adc2",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
+          },
+          {
+            "id": "09e1a7f3cf51f95d",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
+          },
+          {
+            "id": "5139322434149453",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {}
+            }
+          },
+          {
+            "id": "870c8aa7c8034231",
+            "type": "leaf",
+            "state": {
+              "type": "review-queue-list-view",
+              "state": {}
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "f0bba6b4b09d2de2",
+  "lastOpenFiles": [
+    "Paper revision notes.md",
+    "obsidian vault/meeting_notes.md",
+    "Untitled 1.md",
+    "docs/CIDR/acmart-primary/samples/figures/data_rtree.md",
+    "docs/CIDR/acmart-primary/samples/figures/data_rtree.png",
+    "Result Format.md",
+    "docs/CIDR/acmart-primary/samples/figures/skyline_rtree.md",
+    "docs/CIDR/acmart-primary/samples/figures/Screen Shot 2021-08-27 at 5.55.38 AM.png",
+    "docs/CIDR/acmart-primary/samples/figures/competitive_skyline.md",
+    "data/competitive_skyline.md"
+  ]
+}
