@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Paper revision notes.md",
-            "mode": "preview"
+            "file": "README.md",
+            "mode": "source"
           }
         }
       }
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Paper revision notes.md",
+                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -123,12 +123,28 @@
             "id": "5139322434149453",
             "type": "leaf",
             "state": {
-              "type": "calendar",
+              "type": "empty",
               "state": {}
             }
           },
           {
             "id": "870c8aa7c8034231",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
+          },
+          {
+            "id": "7ffeda7ba25e0382",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {}
+            }
+          },
+          {
+            "id": "20d6df4b96d7eaaf",
             "type": "leaf",
             "state": {
               "type": "review-queue-list-view",
@@ -145,6 +161,7 @@
   },
   "active": "f0bba6b4b09d2de2",
   "lastOpenFiles": [
+    "Untitled.md",
     "Paper revision notes.md",
     "obsidian vault/meeting_notes.md",
     "Untitled 1.md",
@@ -153,7 +170,6 @@
     "Result Format.md",
     "docs/CIDR/acmart-primary/samples/figures/skyline_rtree.md",
     "docs/CIDR/acmart-primary/samples/figures/Screen Shot 2021-08-27 at 5.55.38 AM.png",
-    "docs/CIDR/acmart-primary/samples/figures/competitive_skyline.md",
-    "data/competitive_skyline.md"
+    "docs/CIDR/acmart-primary/samples/figures/competitive_skyline.md"
   ]
 }
