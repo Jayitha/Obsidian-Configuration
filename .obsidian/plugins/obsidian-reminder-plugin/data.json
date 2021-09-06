@@ -1,0 +1,14 @@
+{
+  "scanned": true,
+  "reminders": {},
+  "settings": {
+    "reminderTime": "09:00",
+    "laters": "In 30 minutes\nIn 1 hour\nIn 3 hours\nTomorrow\nNext week",
+    "dateFormat": "DD-MM-YYYY",
+    "dateTimeFormat": "DD-MM-YYYY HH:mm",
+    "enableReminderPluginReminderFormat": true,
+    "enableTasksPluginReminderFormat": false,
+    "enableKanbanPluginReminderFormat": false,
+    "useSystemNotification": false
+  }
+}
