@@ -7,8 +7,11 @@
         "id": "1387175d891456f4",
         "type": "leaf",
         "state": {
-          "type": "empty",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "README.md",
+            "mode": "source"
+          }
         }
       }
     ],
@@ -65,6 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -165,12 +169,12 @@
   },
   "active": "1387175d891456f4",
   "lastOpenFiles": [
+    "README.md",
     "Untitled 1.md",
     "Untitled.md",
     "Typing.md",
     "Untitled Diagram.svg",
     "preamble.sty.md",
-    "README.md",
     "Paper revision notes.md",
     "obsidian vault/meeting_notes.md",
     "docs/CIDR/acmart-primary/samples/figures/data_rtree.md",

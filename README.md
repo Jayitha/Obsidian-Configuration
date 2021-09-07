@@ -3,7 +3,7 @@
 - Admonition
 - Advanced Tables
 - Annotator
-- Autocomplete
+- Autocomplete (Disabled because it significantly slows down the editor, causing weird jerky behavior)
 - Banners
 - Better Word Count
 - Calendar
