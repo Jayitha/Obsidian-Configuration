@@ -1160,16 +1160,14 @@ class Banner extends obsidian.MarkdownRenderChild {
         this.wrapper = wrapper;
         this.plugin = plugin;
         this.metaManager = plugin.metaManager;
+        this.vault = plugin.vault;
         this.ctx = ctx;
         this.isEmbed = isEmbed;
         this.isDragging = false;
         this.prevPos = null;
     }
-    onload() {
-        this.render();
-    }
     // Prepare and render banner
-    render() {
+    onload() {
         const { allowMobileDrag, style } = this.plugin.settings;
         const { containerEl: contentEl, frontmatter: { banner: src, banner_x = 0.5, banner_y = 0.5 } } = this.ctx;
         this.wrapper.addClass('obsidian-banner-wrapper');
@@ -1184,7 +1182,7 @@ class Banner extends obsidian.MarkdownRenderChild {
       </div>
     `;
         const img = document.createElement('img');
-        img.className = 'full-width';
+        img.className = 'banner-image full-width';
         img.style.objectPosition = `${banner_x * 100}% ${banner_y * 100}%`;
         img.draggable = false;
         img.onload = () => {
@@ -1207,6 +1205,7 @@ class Banner extends obsidian.MarkdownRenderChild {
         }
         img.src = this.parseSource(src);
         this.containerEl.append(messageBox, img);
+        this.wrapper.prepend(this.containerEl);
     }
     handleDragStart(e) {
         this.prevPos = this.getMousePos(e, this.containerEl);
@@ -1256,11 +1255,8 @@ class Banner extends obsidian.MarkdownRenderChild {
     }
     // Helper to get the URL path to the image file
     parseSource(src) {
-        if (isURL(src)) {
-            return src;
-        }
-        const file = this.plugin.vault.getAbstractFileByPath(src);
-        return (file instanceof obsidian.TFile) ? this.plugin.vault.adapter.getResourcePath(src) : null;
+        const file = this.vault.getAbstractFileByPath(src);
+        return (file instanceof obsidian.TFile) ? this.vault.adapter.getResourcePath(src) : src;
     }
     // Helper to get mouse position
     getMousePos(e, div) {
@@ -1270,11 +1266,20 @@ class Banner extends obsidian.MarkdownRenderChild {
 }
 
 const DEFAULT_SETTINGS = {
-    height: 250,
+    height: null,
     style: 'solid',
     showInEmbed: true,
-    embedHeight: 120,
+    embedHeight: null,
+    showPreviewInLocalModal: true,
+    localSuggestionsLimit: null,
+    bannersFolder: '',
     allowMobileDrag: false
+};
+const INITIAL_SETTINGS = {
+    height: 250,
+    embedHeight: 120,
+    localSuggestionsLimit: 10,
+    bannersFolder: '/'
 };
 const STYLE_OPTIONS = {
     solid: 'Solid',
@@ -1299,8 +1304,9 @@ class SettingsTab extends obsidian.PluginSettingTab {
     }
     display() {
         const { containerEl } = this;
-        const { height, style, showInEmbed, embedHeight, allowMobileDrag } = this.plugin.settings;
+        const { height, style, showInEmbed, embedHeight, showPreviewInLocalModal, localSuggestionsLimit, bannersFolder, allowMobileDrag } = this.plugin.settings;
         containerEl.empty();
+        this.createHeader("Banners", "A nice, lil' thing to add some presentation to your notes");
         // Banner height
         new obsidian.Setting(containerEl)
             .setName('Banner height')
@@ -1308,9 +1314,9 @@ class SettingsTab extends obsidian.PluginSettingTab {
             .addText(text => {
             text.inputEl.type = 'number';
             text.setValue(`${height}`);
-            text.setPlaceholder(`${DEFAULT_SETTINGS.height}`);
+            text.setPlaceholder(`${INITIAL_SETTINGS.height}`);
             text.onChange((val) => __awaiter(this, void 0, void 0, function* () {
-                this.plugin.settings.height = val ? parseInt(val) : DEFAULT_SETTINGS.height;
+                this.plugin.settings.height = val ? parseInt(val) : null;
                 yield this.saveSettings();
             }));
         });
@@ -1343,23 +1349,82 @@ class SettingsTab extends obsidian.PluginSettingTab {
                 .addText(text => {
                 text.inputEl.type = 'number';
                 text.setValue(`${embedHeight}`);
-                text.setPlaceholder(`${DEFAULT_SETTINGS.embedHeight}`);
+                text.setPlaceholder(`${INITIAL_SETTINGS.embedHeight}`);
                 text.onChange((val) => __awaiter(this, void 0, void 0, function* () {
-                    this.plugin.settings.embedHeight = val ? parseInt(val) : DEFAULT_SETTINGS.embedHeight;
+                    this.plugin.settings.embedHeight = val ? parseInt(val) : null;
                     yield this.saveSettings();
                 }));
             });
         }
-        // Experimental setting for dragging banners in mobile
+        this.createHeader('Local Image Modal', 'For the modal that shows when you run the "Add/Change banner with local image" command');
+        // Show preview images in local image modal
+        new obsidian.Setting(containerEl)
+            .setName('Show preview images')
+            .setDesc('Enabling this will display a preview of the images suggested')
+            .addToggle(toggle => toggle
+            .setValue(showPreviewInLocalModal)
+            .onChange((val) => __awaiter(this, void 0, void 0, function* () {
+            this.plugin.settings.showPreviewInLocalModal = val;
+            yield this.saveSettings();
+        })));
+        // Limit of suggestions in local image modal
+        new obsidian.Setting(containerEl)
+            .setName('Suggestions limit')
+            .setDesc(createFragment(frag => {
+            frag.appendText('Show up to this many suggestions when searching through local images.');
+            frag.createEl('br');
+            frag.createEl('b', { text: 'NOTE: ' });
+            frag.appendText('Using a high number while ');
+            frag.createEl('span', { text: 'Show preview images ', attr: { style: 'color: var(--text-normal)' } });
+            frag.appendText('is on can lead to some slowdowns');
+        }))
+            .addText(text => {
+            text.inputEl.type = 'number';
+            text.setValue(`${localSuggestionsLimit}`);
+            text.setPlaceholder(`${INITIAL_SETTINGS.localSuggestionsLimit}`);
+            text.onChange((val) => __awaiter(this, void 0, void 0, function* () {
+                this.plugin.settings.localSuggestionsLimit = val ? parseInt(val) : null;
+                yield this.saveSettings();
+            }));
+        });
+        // Search in a specific folder for banners
+        new obsidian.Setting(containerEl)
+            .setName('Banners folder')
+            .setDesc(createFragment(frag => {
+            frag.appendText('Select a folder to exclusively search for banner files in.');
+            frag.createEl('br');
+            frag.appendText('If empty, it will search the entire vault for image files');
+        }))
+            .addText(text => text
+            .setValue(bannersFolder)
+            .setPlaceholder(INITIAL_SETTINGS.bannersFolder)
+            .onChange((val) => __awaiter(this, void 0, void 0, function* () {
+            this.plugin.settings.bannersFolder = val;
+            yield this.saveSettings();
+        })));
+        this.createHeader('Experimental Things', 'Not as well-tested and probably finicky');
+        // Drag banners in mobile
         new obsidian.Setting(containerEl)
             .setName('Allow mobile drag')
-            .setDesc('EXPERIMENTAL: Allow dragging the banner on mobile devices. App reload might be necessary')
+            .setDesc(createFragment(frag => {
+            frag.appendText('Allow dragging the banner on mobile devices.');
+            frag.createEl('br');
+            frag.createEl('b', { text: 'NOTE: ' });
+            frag.appendText('App reload might be necessary');
+        }))
             .addToggle(toggle => toggle
             .setValue(allowMobileDrag)
             .onChange((val) => __awaiter(this, void 0, void 0, function* () {
             this.plugin.settings.allowMobileDrag = val;
             yield this.saveSettings({ refreshViews: true });
         })));
+    }
+    createHeader(text, desc = null) {
+        const header = this.containerEl.createDiv({ cls: 'setting-item setting-item-heading banner-setting-header' });
+        header.createEl('p', { text });
+        if (desc) {
+            header.createEl('p', { text: desc, cls: 'banner-setting-header-description' });
+        }
     }
 }
 
@@ -1476,34 +1541,38 @@ class MetaManager {
 
 const IMAGE_FORMATS = ['apng', 'avif', 'gif', 'jpg', 'jpeg', 'jpe', 'jif', 'jfif', 'png', 'webp'];
 class LocalImageModal extends obsidian.FuzzySuggestModal {
-    constructor(plugin) {
+    constructor(plugin, file) {
         super(plugin.app);
         this.plugin = plugin;
         this.vault = plugin.app.vault;
+        this.settings = plugin.settings;
         this.metaManager = plugin.metaManager;
-        this.targetFile = null;
+        const { localSuggestionsLimit } = this.settings;
+        this.targetFile = file;
+        this.limit = localSuggestionsLimit !== null && localSuggestionsLimit !== void 0 ? localSuggestionsLimit : INITIAL_SETTINGS.localSuggestionsLimit;
         this.setPlaceholder('Pick an image to use as a banner');
     }
-    launch(file) {
-        this.targetFile = file;
-        super.open();
-    }
     getItems() {
-        return this.vault.getFiles().filter(f => IMAGE_FORMATS.includes(f.extension));
+        const { bannersFolder } = this.settings;
+        return this.vault.getFiles().filter(f => (IMAGE_FORMATS.includes(f.extension) &&
+            (!bannersFolder || f.parent.path.contains(bannersFolder))));
     }
     getItemText(item) {
         return item.path;
     }
     renderSuggestion(match, el) {
         super.renderSuggestion(match, el);
-        const content = el.innerHTML;
-        el.addClass('banner-suggestion-item');
-        el.innerHTML = html `
-      <p class="suggestion-text">${content}</p>
-      <div class="suggestion-image-wrapper">
-        <img src="${this.vault.getResourcePath(match.item)}" />
-      </div>
-    `;
+        const { showPreviewInLocalModal } = this.settings;
+        if (showPreviewInLocalModal) {
+            const content = el.innerHTML;
+            el.addClass('banner-suggestion-item');
+            el.innerHTML = html `
+        <p class="suggestion-text">${content}</p>
+        <div class="suggestion-image-wrapper">
+          <img src="${this.vault.getResourcePath(match.item)}" />
+        </div>
+      `;
+        }
     }
     onChooseItem(image) {
         return __awaiter(this, void 0, void 0, function* () {
@@ -1521,7 +1590,6 @@ class BannersPlugin extends obsidian.Plugin {
             this.vault = this.app.vault;
             this.metadataCache = this.app.metadataCache;
             this.metaManager = new MetaManager(this);
-            this.localImageModal = new LocalImageModal(this);
             this.loadProcessor();
             this.loadCommands();
             this.loadStyles();
@@ -1538,16 +1606,18 @@ class BannersPlugin extends obsidian.Plugin {
     }
     loadProcessor() {
         this.registerMarkdownPostProcessor((el, ctx) => __awaiter(this, void 0, void 0, function* () {
+            // Only process the frontmatter
+            if (!el.querySelector('pre.frontmatter')) {
+                return;
+            }
+            const { showInEmbed } = this.settings;
             const { containerEl, frontmatter } = ctx;
             const isEmbed = containerEl.parentElement.parentElement.hasClass('markdown-embed-content');
-            // Stop here for disallowed/unnecessary processing
-            if (!el.querySelector('pre.frontmatter') ||
-                !(frontmatter === null || frontmatter === void 0 ? void 0 : frontmatter.banner) ||
-                (isEmbed && !this.settings.showInEmbed)) {
+            // Stop here if no banner data is found or if a disallowed embed banner
+            if (!(frontmatter === null || frontmatter === void 0 ? void 0 : frontmatter.banner) || (isEmbed && !showInEmbed)) {
                 return;
             }
             const banner = document.createElement('div');
-            el.prepend(banner);
             ctx.addChild(new Banner(this, banner, el, ctx, isEmbed));
         }));
     }
@@ -1560,7 +1630,7 @@ class BannersPlugin extends obsidian.Plugin {
                 if (checking) {
                     return !!file;
                 }
-                this.localImageModal.launch(file);
+                new LocalImageModal(this, file).open();
             }
         });
         this.addCommand({
@@ -1589,8 +1659,8 @@ class BannersPlugin extends obsidian.Plugin {
     }
     loadStyles() {
         const { embedHeight, height } = this.settings;
-        document.documentElement.style.setProperty('--banner-height', `${height}px`);
-        document.documentElement.style.setProperty('--banner-embed-height', `${embedHeight}px`);
+        document.documentElement.style.setProperty('--banner-height', `${height !== null && height !== void 0 ? height : INITIAL_SETTINGS.height}px`);
+        document.documentElement.style.setProperty('--banner-embed-height', `${embedHeight !== null && embedHeight !== void 0 ? embedHeight : INITIAL_SETTINGS.embedHeight}px`);
     }
     unloadBanners() {
         this.workspace.containerEl

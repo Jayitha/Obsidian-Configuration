@@ -6,12 +6,13 @@
     "convertFoldersToDecks": false,
     "cardCommentOnSameLine": false,
     "burySiblingCards": false,
-    "showContextInCards": true,
+    "showContextInCards": false,
     "flashcardHeightPercentage": 80,
     "flashcardWidthPercentage": 40,
     "showFileNameInFileLink": false,
     "randomizeCardOrder": true,
-    "disableClozeCards": false,
+    "convertHighlightsToClozes": true,
+    "convertBoldTextToClozes": false,
     "singlelineCardSeparator": "::",
     "singlelineReversedCardSeparator": ":::",
     "multilineCardSeparator": "?",
@@ -19,6 +20,7 @@
     "tagsToReview": [
       "#review"
     ],
+    "noteFoldersToIgnore": [],
     "openRandomNote": false,
     "autoNextNote": false,
     "disableFileMenuReviewOptions": false,
@@ -28,9 +30,8 @@
     "easyBonus": 1.3,
     "maximumInterval": 36525,
     "maxLinkFactor": 1,
-    "logLevel": 1
+    "showDebugMessages": false
   },
-  "buryDate": "2021-09-07",
-  "buryList": [],
-  "cache": {}
+  "buryDate": "2021-12-24",
+  "buryList": []
 }

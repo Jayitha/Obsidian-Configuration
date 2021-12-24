@@ -24,10 +24,10 @@
 - Markdown Formatting Assistant
 - Markdown Prettifier
 - Mindmap
-- Note Refector
+- Note Refactor
 - Obsidian Charts
 - Obsidian Git
-- Paster URL into selection
+- Paste URL into selection
 - Periodic Notes
 - Reminder
 - Rollover Daily Todos

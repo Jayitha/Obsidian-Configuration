@@ -71,15 +71,15 @@
   text-align: center;
   color: var(--text-muted);
 }
-.obsidian-banner-wrapper > .obsidian-banner img {
+.obsidian-banner-wrapper > .obsidian-banner img.banner-image {
   position: relative;
   object-fit: cover;
-  max-width: none !important;
+  max-width: none;
   cursor: grab;
   height: 100%;
   width: 100%;
 }
-.obsidian-banner-wrapper > .obsidian-banner img:active {
+.obsidian-banner-wrapper > .obsidian-banner img.banner-image:active {
   cursor: grabbing;
 }
 .obsidian-banner-wrapper.loaded .banner-message {
@@ -121,4 +121,19 @@
   transform: translate(-50%, -50%);
   width: 100%;
   object-fit: cover;
+}
+
+.banner-setting-header {
+  display: block;
+  padding: 6px 0;
+}
+.banner-setting-header p {
+  margin: 0;
+  font-size: 1.2em;
+}
+.banner-setting-header .banner-setting-header-description {
+  margin-top: 2px;
+  font-size: 0.7em;
+  color: var(--text-muted);
+  line-height: 18px;
 }

@@ -1,16 +1,30 @@
 {
   "main": {
-    "id": "157dd3197dae8974",
+    "id": "36d3908d0e8e967c",
     "type": "split",
     "children": [
       {
-        "id": "1387175d891456f4",
+        "id": "1f95c7621b59d038",
         "type": "leaf",
+        "dimension": 61.71201061712011,
+        "pinned": true,
+        "state": {
+          "type": "pdf-annotator",
+          "state": {
+            "file": "Book Notes/Annotations/Causal Inference in Statistics A Primer.md"
+          },
+          "pinned": true
+        }
+      },
+      {
+        "id": "f7ed0aa0c1a58dc9",
+        "type": "leaf",
+        "dimension": 38.28798938287989,
         "state": {
           "type": "markdown",
           "state": {
-            "file": "README.md",
-            "mode": "source"
+            "file": "Book Notes/Notes/Causal Inference.md",
+            "mode": "preview"
           }
         }
       }
@@ -39,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#main-memory",
+                "query": "tag:#Question",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -47,12 +61,21 @@
                 "sortOrder": "alphabetical"
               }
             }
+          },
+          {
+            "id": "ef6b65ceeddf6a8d",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
           }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 231.0319366455078,
+    "collapsed": true
   },
   "right": {
     "id": "dd8880159c586f4f",
@@ -68,7 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "README.md",
+                "file": "Book Notes/Notes/Causal Inference.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -80,63 +103,28 @@
             }
           },
           {
-            "id": "e4943ea7bc52df5f",
+            "id": "358626d95abef57f",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "outline",
+              "state": {
+                "file": "Book Notes/Notes/Causal Inference.md"
+              }
             }
           },
           {
-            "id": "5d1b87f29a3595b9",
+            "id": "1d3532138fb74f7d",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
             }
           },
           {
-            "id": "7493595e57e345d0",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {}
-            }
-          },
-          {
-            "id": "819d89b4c705adc2",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {}
-            }
-          },
-          {
-            "id": "09e1a7f3cf51f95d",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {}
-            }
-          },
-          {
-            "id": "5139322434149453",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {}
-            }
-          },
-          {
-            "id": "870c8aa7c8034231",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {}
-            }
-          },
-          {
-            "id": "94896a1d390e8d5e",
+            "id": "e6664d29239d7ac8",
             "type": "leaf",
             "state": {
               "type": "calendar",
@@ -144,7 +132,7 @@
             }
           },
           {
-            "id": "b818c37b3adca83f",
+            "id": "5fad2b98ae2f7f1f",
             "type": "leaf",
             "state": {
               "type": "review-queue-list-view",
@@ -152,7 +140,15 @@
             }
           },
           {
-            "id": "be03292ae525e615",
+            "id": "504af020c06681d9",
+            "type": "leaf",
+            "state": {
+              "type": "online.larslockefeer.obsidian-plugin-todo",
+              "state": {}
+            }
+          },
+          {
+            "id": "92bfc49111e2f7bf",
             "type": "leaf",
             "state": {
               "type": "reminder-list",
@@ -160,24 +156,24 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
     "width": 300,
     "collapsed": true
   },
-  "active": "1387175d891456f4",
+  "active": "f7ed0aa0c1a58dc9",
   "lastOpenFiles": [
-    "README.md",
-    "Untitled 1.md",
-    "Untitled.md",
-    "Typing.md",
-    "Untitled Diagram.svg",
+    "Book Notes/Notes/Causal Inference.md",
+    "Book Notes/Annotations/Causal Inference in Statistics A Primer.md",
     "preamble.sty.md",
-    "Paper revision notes.md",
-    "obsidian vault/meeting_notes.md",
-    "docs/CIDR/acmart-primary/samples/figures/data_rtree.md",
-    "docs/CIDR/acmart-primary/samples/figures/data_rtree.png"
+    "Book Notes/Book Reading.md",
+    "Papers Summaries/Summaries/Causal Relational Learning.md",
+    "Book Notes/Notes/Flashcards.md",
+    "Book Notes/Notes/Elements of Causal Inference.md",
+    "Book Notes/Books/Causal Inference in Statistics A Primer.pdf",
+    "Papers Summaries/Paper Reading.md",
+    "Untitled Kanban.md"
   ]
 }

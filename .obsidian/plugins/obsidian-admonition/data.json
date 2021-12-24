@@ -1,10 +1,67 @@
 {
-  "userAdmonitions": {},
-  "syntaxHighlight": false,
+  "userAdmonitions": {
+    "property": {
+      "type": "property",
+      "color": "95, 221, 143",
+      "icon": {
+        "name": "atom",
+        "type": "font-awesome"
+      },
+      "command": false
+    },
+    "theorem": {
+      "type": "theorem",
+      "color": "238, 255, 107",
+      "icon": {
+        "name": "bookmark",
+        "type": "font-awesome"
+      },
+      "command": false
+    },
+    "proof": {
+      "type": "proof",
+      "color": "#7d7d7d",
+      "icon": {
+        "name": "pencil-alt",
+        "type": "font-awesome"
+      },
+      "command": false
+    },
+    "corollary": {
+      "type": "corollary",
+      "color": "#7d7d7d",
+      "icon": {
+        "name": "adjust",
+        "type": "font-awesome"
+      },
+      "command": false
+    },
+    "remark": {
+      "type": "remark",
+      "color": "221, 141, 188",
+      "icon": {
+        "name": "surveillance-camera",
+        "type": "rpg"
+      },
+      "command": false
+    },
+    "definition": {
+      "type": "definition",
+      "color": "0, 38, 128",
+      "icon": {
+        "name": "align-left",
+        "type": "font-awesome"
+      },
+      "command": false
+    }
+  },
+  "syntaxHighlight": true,
   "copyButton": false,
-  "version": "6.2.5",
-  "autoCollapse": false,
+  "version": "6.7.2",
+  "autoCollapse": true,
   "defaultCollapseType": "open",
   "syncLinks": true,
-  "enableMarkdownProcessor": false
+  "enableMarkdownProcessor": true,
+  "injectColor": true,
+  "parseTitles": true
 }

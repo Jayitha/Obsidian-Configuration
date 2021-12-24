@@ -34,5 +34,7 @@
   "obsidian-annotator",
   "obsidian-reminder-plugin",
   "obsidian-markdown-formatting-assistant-plugin",
-  "dataview"
+  "dataview",
+  "obsidian-markmind",
+  "obsidian-plugin-todo"
 ]
