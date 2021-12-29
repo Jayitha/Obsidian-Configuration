@@ -4,22 +4,8 @@
     "type": "split",
     "children": [
       {
-        "id": "1f95c7621b59d038",
-        "type": "leaf",
-        "dimension": 61.71201061712011,
-        "pinned": true,
-        "state": {
-          "type": "pdf-annotator",
-          "state": {
-            "file": "Book Notes/Annotations/Causal Inference in Statistics A Primer.md"
-          },
-          "pinned": true
-        }
-      },
-      {
         "id": "f7ed0aa0c1a58dc9",
         "type": "leaf",
-        "dimension": 38.28798938287989,
         "state": {
           "type": "markdown",
           "state": {
@@ -74,8 +60,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 231.0319366455078,
-    "collapsed": true
+    "width": 231.0319366455078
   },
   "right": {
     "id": "dd8880159c586f4f",
@@ -156,7 +141,7 @@
             }
           }
         ],
-        "currentTab": 5
+        "currentTab": 6
       }
     ],
     "direction": "horizontal",
