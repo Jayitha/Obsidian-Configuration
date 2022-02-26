@@ -4,13 +4,14 @@
     "type": "split",
     "children": [
       {
-        "id": "f7ed0aa0c1a58dc9",
+        "id": "2d50726b18cdac28",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Book Notes/Notes/Causal Inference.md",
-            "mode": "preview"
+            "file": "Competitive Skylines/Drafts/VLDB/2d Competitive Skylines.md",
+            "mode": "preview",
+            "source": true
           }
         }
       }
@@ -55,12 +56,21 @@
               "type": "starred",
               "state": {}
             }
+          },
+          {
+            "id": "5fac81e145155772",
+            "type": "leaf",
+            "state": {
+              "type": "VIEW_TYPE_LONGFORM_EXPLORER",
+              "state": {}
+            }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
-    "width": 231.0319366455078
+    "width": 339.041446685791
   },
   "right": {
     "id": "dd8880159c586f4f",
@@ -76,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Book Notes/Notes/Causal Inference.md",
+                "file": "Competitive Skylines/Drafts/VLDB/2d Competitive Skylines.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -93,7 +103,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Book Notes/Notes/Causal Inference.md"
+                "file": "Competitive Skylines/Drafts/VLDB/2d Competitive Skylines.md"
               }
             }
           },
@@ -148,17 +158,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "f7ed0aa0c1a58dc9",
+  "active": "2d50726b18cdac28",
   "lastOpenFiles": [
-    "Book Notes/Notes/Causal Inference.md",
-    "Book Notes/Annotations/Causal Inference in Statistics A Primer.md",
-    "preamble.sty.md",
-    "Book Notes/Book Reading.md",
-    "Papers Summaries/Summaries/Causal Relational Learning.md",
-    "Book Notes/Notes/Flashcards.md",
-    "Book Notes/Notes/Elements of Causal Inference.md",
-    "Book Notes/Books/Causal Inference in Statistics A Primer.pdf",
-    "Papers Summaries/Paper Reading.md",
-    "Untitled Kanban.md"
+    "Competitive Skylines/Drafts/VLDB/2d Competitive Skylines.md",
+    "Competitive Skylines/Drafts/VLDB/Maximal Competitive Skyline.md",
+    "Competitive Skylines/Drafts/VLDB/Closed Competitive Skyline.md",
+    "Competitive Skylines/Drafts/VLDB/Competitive Skyline.md",
+    "Competitive Skylines/Drafts/VLDB/Related Work.md",
+    "Competitive Skylines/Drafts/VLDB/Introduction.md",
+    "Competitive Skylines/Drafts/VLDB/Abstract.md",
+    "Competitive Skylines/Drafts/VLDB/References.md",
+    "Competitive Skylines/Drafts/VLDB/Conclusion and Future Work.md",
+    "Competitive Skylines/Drafts/VLDB/Experimental Evaluation.md"
   ]
 }

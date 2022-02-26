@@ -37,5 +37,7 @@
   "dataview",
   "obsidian-markmind",
   "obsidian-plugin-todo",
-  "obsidian-comments"
+  "obsidian-comments",
+  "obsidian-plugin-toc",
+  "longform"
 ]

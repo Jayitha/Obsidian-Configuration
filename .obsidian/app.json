@@ -14,5 +14,8 @@
     "declaratively",
     "scalable"
   ],
-  "promptDelete": false
+  "promptDelete": false,
+  "legacyEditor": false,
+  "livePreview": false,
+  "alwaysUpdateLinks": true
 }

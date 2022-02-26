@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "projects": {
+    "Longform": {
+      "path": "Longform",
+      "indexFile": "Index",
+      "draftsPath": "Drafts/"
+    },
+    "Competitive Skylines": {
+      "path": "Competitive Skylines",
+      "indexFile": "Index",
+      "draftsPath": "Drafts/"
+    }
+  },
+  "selectedProject": "Competitive Skylines",
+  "selectedDraft": "VLDB"
+}

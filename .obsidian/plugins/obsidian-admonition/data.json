@@ -53,6 +53,54 @@
         "type": "font-awesome"
       },
       "command": false
+    },
+    "summary": {
+      "type": "summary",
+      "color": "27, 196, 208",
+      "icon": {
+        "name": "border-all",
+        "type": "font-awesome"
+      },
+      "command": false,
+      "title": "Summary",
+      "injectColor": true,
+      "noTitle": false
+    },
+    "comment": {
+      "type": "comment",
+      "color": "#7d7d7d",
+      "icon": {
+        "name": "allergies",
+        "type": "font-awesome"
+      },
+      "command": false,
+      "title": "comment",
+      "injectColor": true,
+      "noTitle": false
+    },
+    "lemma": {
+      "type": "lemma",
+      "color": "235, 151, 55",
+      "icon": {
+        "name": "bahai",
+        "type": "font-awesome"
+      },
+      "command": false,
+      "title": "Lemma",
+      "injectColor": true,
+      "noTitle": false
+    },
+    "algorithm": {
+      "type": "algorithm",
+      "color": "#7d7d7d",
+      "icon": {
+        "name": "bookmark",
+        "type": "font-awesome"
+      },
+      "command": false,
+      "title": "Algorithm",
+      "injectColor": true,
+      "noTitle": false
     }
   },
   "syntaxHighlight": true,
