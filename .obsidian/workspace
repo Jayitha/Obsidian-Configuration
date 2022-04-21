@@ -4,14 +4,12 @@
     "type": "split",
     "children": [
       {
-        "id": "2d50726b18cdac28",
+        "id": "34b4e4bcc1a0797d",
         "type": "leaf",
         "state": {
-          "type": "markdown",
+          "type": "pdf-annotator",
           "state": {
-            "file": "Competitive Skylines/Drafts/VLDB/2d Competitive Skylines.md",
-            "mode": "preview",
-            "source": true
+            "file": "Papers Summaries/Summaries/Functional Dependency Discovery An Experimental Evaluation of Seven Algorithms.md"
           }
         }
       }
@@ -40,7 +38,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#Question",
+                "query": "tag:#2021-12-25",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -58,19 +56,19 @@
             }
           },
           {
-            "id": "5fac81e145155772",
+            "id": "1be7c7f533b288f8",
             "type": "leaf",
             "state": {
               "type": "VIEW_TYPE_LONGFORM_EXPLORER",
               "state": {}
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 339.041446685791
+    "width": 237.04144668579102,
+    "collapsed": true
   },
   "right": {
     "id": "dd8880159c586f4f",
@@ -86,7 +84,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Competitive Skylines/Drafts/VLDB/2d Competitive Skylines.md",
+                "file": "Papers Summaries/Summaries/Functional Dependency Discovery An Experimental Evaluation of Seven Algorithms.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +101,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Competitive Skylines/Drafts/VLDB/2d Competitive Skylines.md"
+                "file": "Papers Summaries/Summaries/Functional Dependency Discovery An Experimental Evaluation of Seven Algorithms.md"
               }
             }
           },
@@ -127,15 +125,7 @@
             }
           },
           {
-            "id": "5fad2b98ae2f7f1f",
-            "type": "leaf",
-            "state": {
-              "type": "review-queue-list-view",
-              "state": {}
-            }
-          },
-          {
-            "id": "504af020c06681d9",
+            "id": "b9190d1e0e6d8e55",
             "type": "leaf",
             "state": {
               "type": "online.larslockefeer.obsidian-plugin-todo",
@@ -143,32 +133,52 @@
             }
           },
           {
-            "id": "92bfc49111e2f7bf",
+            "id": "25352b31c8301169",
+            "type": "leaf",
+            "state": {
+              "type": "review-queue-list-view",
+              "state": {}
+            }
+          },
+          {
+            "id": "82f3ac0948dc0b18",
             "type": "leaf",
             "state": {
               "type": "reminder-list",
               "state": {}
             }
+          },
+          {
+            "id": "1716ab0cbba03139",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Papers Summaries/Summaries/Functional Dependency Discovery An Experimental Evaluation of Seven Algorithms.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
           }
         ],
-        "currentTab": 6
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
-    "width": 300,
+    "width": 245.57240295410156,
     "collapsed": true
   },
-  "active": "2d50726b18cdac28",
+  "active": "34b4e4bcc1a0797d",
   "lastOpenFiles": [
-    "Competitive Skylines/Drafts/VLDB/2d Competitive Skylines.md",
-    "Competitive Skylines/Drafts/VLDB/Maximal Competitive Skyline.md",
-    "Competitive Skylines/Drafts/VLDB/Closed Competitive Skyline.md",
-    "Competitive Skylines/Drafts/VLDB/Competitive Skyline.md",
-    "Competitive Skylines/Drafts/VLDB/Related Work.md",
-    "Competitive Skylines/Drafts/VLDB/Introduction.md",
-    "Competitive Skylines/Drafts/VLDB/Abstract.md",
-    "Competitive Skylines/Drafts/VLDB/References.md",
-    "Competitive Skylines/Drafts/VLDB/Conclusion and Future Work.md",
-    "Competitive Skylines/Drafts/VLDB/Experimental Evaluation.md"
+    "Papers Summaries/Summaries/Functional Dependency Discovery An Experimental Evaluation of Seven Algorithms.md",
+    "Book Notes/Annotations/Causal Inference.md",
+    "2022-04-21.md",
+    "Text and Typography.md",
+    "Book Notes/Notes/Elements of Causal Inference.md",
+    "Book Notes/Notes/Causal Inference.md",
+    "preamble.sty.md",
+    "Book Notes/Books/Causal Inference in Statistics A Primer.pdf",
+    "Thesis Journal/To Do.md",
+    "Untitled Kanban.md"
   ]
 }

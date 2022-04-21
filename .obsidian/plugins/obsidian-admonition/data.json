@@ -1,55 +1,10 @@
 {
   "userAdmonitions": {
-    "property": {
-      "type": "property",
-      "color": "95, 221, 143",
-      "icon": {
-        "name": "atom",
-        "type": "font-awesome"
-      },
-      "command": false
-    },
-    "theorem": {
-      "type": "theorem",
-      "color": "238, 255, 107",
-      "icon": {
-        "name": "bookmark",
-        "type": "font-awesome"
-      },
-      "command": false
-    },
     "proof": {
       "type": "proof",
       "color": "#7d7d7d",
       "icon": {
         "name": "pencil-alt",
-        "type": "font-awesome"
-      },
-      "command": false
-    },
-    "corollary": {
-      "type": "corollary",
-      "color": "#7d7d7d",
-      "icon": {
-        "name": "adjust",
-        "type": "font-awesome"
-      },
-      "command": false
-    },
-    "remark": {
-      "type": "remark",
-      "color": "221, 141, 188",
-      "icon": {
-        "name": "surveillance-camera",
-        "type": "rpg"
-      },
-      "command": false
-    },
-    "definition": {
-      "type": "definition",
-      "color": "0, 38, 128",
-      "icon": {
-        "name": "align-left",
         "type": "font-awesome"
       },
       "command": false
@@ -66,50 +21,133 @@
       "injectColor": true,
       "noTitle": false
     },
-    "comment": {
-      "type": "comment",
-      "color": "#7d7d7d",
+    "property": {
+      "type": "property",
+      "color": "95, 221, 143",
       "icon": {
-        "name": "allergies",
-        "type": "font-awesome"
+        "name": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAYCAYAAAAlBadpAAAA+UlEQVQ4T83UsS4FURDG8d99B2qVKC7VbSQUPMQtVQqJWiMaOgmdQnJLhcIjaBQotEJCKLToKckkZ5OTtTZ7VuMk2+yZ/+SbOd/MwB/OILG7LTlu8YwnfOZxAV9gpYOAF+zgtIoN+KsDmIdsYz9+1OG9hkQzGGEhu1vETR2uetAk5gzjdBEljErg4E6wlhIclsLLuEzweSk8jbcEv5bCU3jvCy/hqq/sqDfqjnNUIvsAW9kbrnYxySzmklEqdhPHfey5gUmTPdts/oh1XP82GE3efkCA8X3URzKfqjZv/1BV0u1/Bt9hiHvMl2yVfAG2LcHGnEXdrWf4Bn1dNcoVFWOMAAAAAElFTkSuQmCC",
+        "type": "image"
       },
       "command": false,
-      "title": "comment",
+      "title": "Property",
       "injectColor": true,
-      "noTitle": false
-    },
-    "lemma": {
-      "type": "lemma",
-      "color": "235, 151, 55",
-      "icon": {
-        "name": "bahai",
-        "type": "font-awesome"
-      },
-      "command": false,
-      "title": "Lemma",
-      "injectColor": true,
-      "noTitle": false
+      "noTitle": false,
+      "copy": false
     },
     "algorithm": {
       "type": "algorithm",
       "color": "#7d7d7d",
       "icon": {
-        "name": "bookmark",
-        "type": "font-awesome"
+        "name": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAYCAYAAAD3Va0xAAABnElEQVQ4T63Uv0uXURTH8ZctOYggNOSWi4Oh/ZijCEGCShAsIhraKnApl2rSJQmyxcEaoySwJayGloagsahIoSndgoLwD9DiwHnk8eH74/lKZ3mee+/nvO895557uvwn66rBuYBuPG2lbQc6i9cJmMVMM1g70HNcSufvOIytRrBWoGP4VHG6iiedgh5guuL0Fmc6AfUiQjnYwOkU3lfnm4V2Ew9TXDidzPEj3KgL+ojjKb6S32f53cQA/pRhjU40iRcpWk+nGP7AoZy/jfvtQCs4n6K7mMv/O7iX/19wtBVoGF9TsI0DpRD68Bv7cn0crwpYNbRI5LUWSV3E9Vx/iYlGoP25Y08uHimdrtCPIMIqLHK2EYPyiaL4ogjD3uBc9YpzHG8v3mBYJDwSvwsUBTjYxLnZ9E/0l0FxS3Fbe7Gos6UitHhDY3uh4ANOBCjCibAKG8W7GtC/Jc1IgBYwlZOfEe2jjs3jVgoXA1QmR408rkPJDXf6VYC+ZedbxWn8qgkKWfGc1gM0hItYxloHkJBGfi9HJ23Xs2tz/wGC1kQIZ5JgigAAAABJRU5ErkJggg==",
+        "type": "image"
       },
       "command": false,
       "title": "Algorithm",
       "injectColor": true,
-      "noTitle": false
+      "noTitle": false,
+      "copy": false
+    },
+    "lemma": {
+      "type": "lemma",
+      "color": "235, 151, 55",
+      "icon": {
+        "name": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAYCAYAAAAlBadpAAAAbklEQVQ4T2NkoAAwIul1gLIPEGseTLMxAwPDGagmEwYGhrPEGADT3MDAwFAP1dDIwMAA4hMEo5ohQTQaYHiSymgiGQyJhGBeBuV5bFFFjEaQmgMwzaDyaz+xuqDqriIXgKByzJcEA+DOJkEPQikAD/IprAFUZbQAAAAASUVORK5CYII=",
+        "type": "image"
+      },
+      "command": false,
+      "title": "Lemma",
+      "injectColor": true,
+      "noTitle": false,
+      "copy": false
+    },
+    "comment": {
+      "type": "comment",
+      "color": "#7d7d7d",
+      "icon": {
+        "name": "comment",
+        "type": "font-awesome"
+      },
+      "command": false,
+      "title": "comment",
+      "injectColor": true,
+      "noTitle": false,
+      "copy": false
+    },
+    "definition": {
+      "type": "definition",
+      "color": "0, 38, 128",
+      "icon": {
+        "name": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAYCAYAAAD3Va0xAAABG0lEQVQ4T83UMS/FUBQA4O+NbCwGi4EYxCxiYbFbDDaL5EVsBiODGGwSQsL2NovVxMaAGKwmIhKRvH9ALrfJTdO+VPsGTTrc3tOv55y2p6VPRys62z28F7ziDp9lcQG6wnzFxG5whE4+PkBfFZE07AJL6YU8tFOATiI7B5P9LoaydR7KelaUZMDOMJdsHqMd1n+BsvtPsJZg66FvdaBghIb/ZIJnzNaFApC+7XYTaAMHMatOE2gRlxF6bAKN4D1C3X8B9a20TezH0k7rljaGewxHaLUudIuZph/kHraa/CKhnF2sJMg1Fop+2qIxMo1xTGAgQd4wWjZGqs64cyznB9sTpioKocmHZaM2GFWG/wM+yh7YayJWTPI37BuUST/FSQBZPwAAAABJRU5ErkJggg==",
+        "type": "image"
+      },
+      "command": false,
+      "title": "Definition",
+      "injectColor": true,
+      "noTitle": false,
+      "copy": false
+    },
+    "corollary": {
+      "type": "corollary",
+      "color": "#7d7d7d",
+      "icon": {
+        "name": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAYCAYAAAD3Va0xAAABdUlEQVQ4T63VsUuWURTH8Y+zTUFY2d6gGI1BRJtgGKK4KA4SzUIYDQUSNWXQLDqIoyAFKoiLgqBif0CQkQ5hFNEWNsape+Xp4X31eV68cJbnnt/33nPuOedpc06r7QzORdzGNbTjAz4n+13UNgP1YgyjTQ46wixm8DV8GoHm8KBixAGcwlwZtIjhEiRO3MYBenADHSWf50XQNCYLDnuYwG6D240g7F7aO8qgu9goCJZxv0J4OYLtDFpDJDjWPMYrQLJLXGIzQINYSl8P0Y1fNUB/XQP0Ek+T8Ale1YVk0Cr6krgfK62CohauJPHVXGB1YRHaF3Qm4WV8qwvJoUWiI+Gx4uXWWwU9w4skfozXrYIG8DaJf+A6ftaFNSrILdypATopyNCUW+QNHlWA5RZZOK1p36Xi3GkALDftYZUx8h3v8RE30YVLJfh/YyTv1R1s0V7zp43ahxhqkqdKo7aojRBupeF/AZ+S7eO46HjWX6TCw/1z+QN+v0hDVjYgIAAAAABJRU5ErkJggg==",
+        "type": "image"
+      },
+      "command": false,
+      "title": "Corollary",
+      "injectColor": true,
+      "noTitle": false,
+      "copy": false
+    },
+    "remark": {
+      "type": "remark",
+      "color": "221, 141, 188",
+      "icon": {
+        "name": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAYCAYAAAAlBadpAAABIklEQVQ4T6XUsS5EQRTG8d+WEgrxDDREVIRCqBWilCiIeACdQrEbLyAKlUQl0dEpUUhsaUNCIZEoJRQKJZnN3GRyc+3e4XQzc/7fOXPv+abhH9GIbLOHxic6eMRrmhfgSyzUbOAEa0VugL9rgkXaO0bCogy3KoQGMIqV5OwUq2W4+AZVzczgNjlo5cCBW8dxFDjLhcfwFOHnXHgQ4deF+MqF53AT4U4unM7EYR14CJPYwGas+obZvwxJ4LdwlAt/4ABdL+TAF9iJJul23+/O02gnU7WN/d+MUTWeu9hLBKZwV6dywVxjPi6usJgDDyNYsYjgvma/O6fuSk0R9pdy4ACcYzkqtgN8j3E8YKLKyKW94uV5SR/AXo9gWTPkdiv/OX4AYHM93JK2y+YAAAAASUVORK5CYII=",
+        "type": "image"
+      },
+      "command": false,
+      "injectColor": true,
+      "noTitle": false,
+      "copy": false
+    },
+    "theorem": {
+      "type": "theorem",
+      "color": "238, 255, 107",
+      "icon": {
+        "name": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAYCAYAAAD3Va0xAAAAdUlEQVQ4T2NkoBJghJrTQKF5U0AG7WdgYHCg0KA7IIOuMDAwaFNo0FVivFYPtaQRj2WTYAbhUgMKO2SDcIblqEHgIAQF9mgYYaam0XTEwDCaRSjPIqAiGFQUg4AjAwPDAVwFF6HABukzhmo+i684JsYgoopzAJDcKe7sy6zZAAAAAElFTkSuQmCC",
+        "type": "image"
+      },
+      "command": false,
+      "injectColor": true,
+      "noTitle": false,
+      "copy": false
     }
   },
-  "syntaxHighlight": true,
+  "syntaxHighlight": false,
   "copyButton": false,
-  "version": "6.7.2",
+  "version": "7.0.4",
   "autoCollapse": true,
   "defaultCollapseType": "open",
   "syncLinks": true,
-  "enableMarkdownProcessor": true,
   "injectColor": true,
-  "parseTitles": true
+  "parseTitles": true,
+  "allowMSSyntax": false,
+  "msSyntaxIndented": true,
+  "livePreviewMS": true,
+  "dropShadow": true,
+  "hideEmpty": false,
+  "open": {
+    "admonitions": false,
+    "icons": true,
+    "other": true,
+    "advanced": true
+  },
+  "icons": [
+    "rpg",
+    "octicons"
+  ],
+  "useFontAwesome": true,
+  "rpgDownloadedOnce": true,
+  "enableMarkdownProcessor": true
 }

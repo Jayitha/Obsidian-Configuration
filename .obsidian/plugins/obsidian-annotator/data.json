@@ -1,14 +1,16 @@
 {
   "deafultDarkMode": true,
   "darkReaderSettings": {
-    "brightness": 150,
-    "contrast": 85,
+    "brightness": 78,
+    "contrast": 129,
     "sepia": 0
   },
+  "debugLogging": false,
   "customDefaultPath": "",
   "annotationMarkdownSettings": {
     "includePrefix": true,
     "highlightHighlightedText": true,
-    "includePostfix": true
+    "includePostfix": true,
+    "annotationModeByDefault": true
   }
 }
